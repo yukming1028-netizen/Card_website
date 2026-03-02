@@ -36,7 +36,7 @@ COPY backend/ ./
 FROM node:18-alpine
 
 # 安裝必要的工具和 nginx
-RUN apk add --no-cache dumb-init nginx gettext
+RUN apk add --no-cache dumb-init nginx gettext curl
 
 # 創建應用目錄
 WORKDIR /app
@@ -50,28 +50,12 @@ COPY --from=frontend-builder /app/build /app/frontend/build
 # 從後端準備階段複製後端文件
 COPY --from=backend-prep /app /app
 
-# 複製 nginx 配置
-COPY nginx-render.conf /etc/nginx/conf.d/default.conf
+# 複製 nginx 配置模板
+COPY nginx-render.conf.template /etc/nginx/conf.d/default.conf.template
 
-# 創建啟動腳本
-RUN echo '#!/bin/sh\n\
-# 啟動後端服務在後台（監聽 3000 端口）\n\
-echo "Starting backend server on port 3000..."\n\
-node index.js &\n\
-BACKEND_PID=$!\n\
-\n\
-# 啟動 nginx（監聽 80 端口）\n\
-echo "Starting nginx on port 80..."\n\
-nginx &\n\
-NGINX_PID=$!\n\
-\n\
-# 等待任一進程退出\n\
-wait -n $BACKEND_PID $NGINX_PID\n\
-\n\
-# 如果其中一個進程退出，終止所有進程\n\
-echo "One of processes exited. Terminating..."\n\
-kill $BACKEND_PID $NGINX_PID 2>/dev/null\n\
-' > /app/start.sh && chmod +x /app/start.sh
+# 複製啟動腳本
+COPY start.sh /app/start.sh
+RUN chmod +x /app/start.sh
 
 # 創建非 root 用戶以提高安全性
 RUN addgroup -g 1001 -S nodejs && \
