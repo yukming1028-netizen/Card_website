@@ -6,11 +6,11 @@ FROM node:18-alpine AS frontend-builder
 
 WORKDIR /app
 
-# 複製前端 package.json
+# 複製前端 package.json 和 package-lock.json
 COPY frontend/package*.json ./
 
-# 安裝前端依賴（使用 npm install 兼容性更好）
-RUN npm install
+# 安裝前端依賴（使用 npm ci 更快）
+RUN npm ci
 
 # 複製前端源代碼
 COPY frontend/ ./
@@ -23,11 +23,11 @@ FROM node:18-alpine AS backend-prep
 
 WORKDIR /app
 
-# 複製後端 package.json
+# 複製後端 package.json 和 package-lock.json
 COPY backend/package*.json ./
 
-# 安裝後端依賴（只安裝生產依賴）
-RUN npm install --only=production
+# 安裝後端依賴（使用 npm ci 更快）
+RUN npm ci --only=production
 
 # 複製後端源代碼
 COPY backend/ ./
