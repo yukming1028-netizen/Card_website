@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import CardDetail from './CardDetail';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+// 整合 Docker 使用相對路徑，獨立部署使用完整 URL
+const API_URL = process.env.REACT_APP_API_URL || '/api';
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('');
