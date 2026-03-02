@@ -39,7 +39,7 @@ COPY backend/ ./
 FROM node:18-alpine
 
 # 安裝必要的工具和 nginx
-RUN apk add --no-cache dumb-init nginx gettext
+RUN apk add --no-cache dumb-init nginx gettext curl
 
 # 創建應用目錄
 WORKDIR /app
