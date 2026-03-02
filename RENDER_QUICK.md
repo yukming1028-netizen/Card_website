@@ -21,13 +21,13 @@
 Name: card-inventory-backend
 Region: Singapore（或最接近你的區域）
 Branch: main
-Root Directory: backend
+Root Directory: . （根目錄）
 ```
 
 **構建配置**：
 ```
 Runtime: Docker
-DockerfilePath: Dockerfile.render
+DockerfilePath: Dockerfile.backend
 ```
 
 **環境變量**：
@@ -50,13 +50,13 @@ STATIC_KEY=<你的金輪>
 Name: card-inventory-frontend
 Region: Singapore（與後端相同）
 Branch: main
-Root Directory: frontend
+Root Directory: . （根目錄）
 ```
 
 **構建配置**：
 ```
 Runtime: Docker
-DockerfilePath: Dockerfile.render
+DockerfilePath: Dockerfile.frontend
 ```
 
 **環境變量**（可選）：
@@ -66,7 +66,7 @@ REACT_APP_API_URL=https://card-inventory-backend.onrender.com/api
 
 ## 📦 Docker 鏡像說明
 
-### 後端（backend/Dockerfile.render）
+### 後端（Dockerfile.backend）
 
 - **基礎鏡像**：Node.js 18 Alpine
 - **鏡像大小**：~150-200 MB
@@ -76,7 +76,7 @@ REACT_APP_API_URL=https://card-inventory-backend.onrender.com/api
   - 正確的信号處理
   - 生產環境優化
 
-### 前端（frontend/Dockerfile.render）
+### 前端（Dockerfile.frontend）
 
 - **基礎鏡像**：Nginx Alpine
 - **鏡像大小**：~25-35 MB
