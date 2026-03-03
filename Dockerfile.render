@@ -1,22 +1,16 @@
-# Stage 1: frontend build
-FROM node:18-alpine AS frontend-builder
-WORKDIR /app
-COPY frontend/package*.json ./
-RUN npm ci
-COPY frontend/ ./
-RUN npm run build
-
-# Stage 2: final image
 FROM node:18-alpine
+
 WORKDIR /app
 
-# 先複製後端
+# 複製後端依賴
 COPY backend/package*.json ./
 RUN npm ci --only=production
+
+# 複製後端代碼
 COPY backend/ ./
 
-# 複製前端構建文件
-COPY --from=frontend-builder /app/build /app/frontend/build
+# 複製本地已構建的前端文件
+COPY frontend/build /app/frontend/build
 
 # 暴露端口
 EXPOSE 3000
