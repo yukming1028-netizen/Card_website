@@ -1,8 +1,16 @@
-FROM node:18-alpine
+# Stage 1: 構建前端
+FROM node:18-alpine AS frontend-builder
+WORKDIR /app
+COPY frontend/package*.json ./
+RUN npm ci
+COPY frontend/ ./
+RUN npm run build
 
+# Stage 2: 構建後端（單一鏡像）
+FROM node:18-alpine
 WORKDIR /app
 
-# 複製後端依賴
+# 安裝後端依賴
 COPY backend/package*.json ./
 RUN npm ci --only=production
 
