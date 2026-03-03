@@ -7,6 +7,9 @@ const pool = new Pool({
   database: process.env.DB_NAME || 'card_inventory',
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
+  ssl: {
+    rejectUnauthorized: false  // Aiven 需要 SSL，生產環境可提供 CA cert
+  }
 });
 
 module.exports = pool;
