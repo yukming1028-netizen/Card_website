@@ -325,7 +325,7 @@ async function initDatabase() {
 }
 
 // 服務前端靜態文件（放在最後）
-const frontendBuildPath = path.join(__dirname, '../frontend/build');
+const frontendBuildPath = path.join(__dirname, '../app/build');
 app.use(express.static(frontendBuildPath));
 
 // 所有非 API 請求返回 index.html（支持 React Router）

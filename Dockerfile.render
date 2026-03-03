@@ -10,7 +10,7 @@ RUN npm ci --only=production
 COPY backend/ ./
 
 # 複製本地已構建的前端文件
-COPY frontend/build /app/frontend/build
+COPY --from=frontend-builder /app/build /app/build
 
 # 暴露端口
 EXPOSE 3000
