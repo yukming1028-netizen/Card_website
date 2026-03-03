@@ -11,17 +11,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 服務前端靜態文件
-const frontendBuildPath = path.join(__dirname, '../frontend/build');
-app.use(express.static(frontendBuildPath));
-
-// 所有非 API 請求返回 index.html（支持 React Router）
-app.get('*', (req, res) => {
-  if (!req.path.startsWith('/api') && !req.path.startsWith('/admin-api')) {
-    res.sendFile(path.join(frontendBuildPath, 'index.html'));
-  }
-});
-
 // Health check endpoint for Render
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
@@ -334,6 +323,17 @@ async function initDatabase() {
     console.error('數據庫初始化錯誤:', error);
   }
 }
+
+// 服務前端靜態文件（放在最後）
+const frontendBuildPath = path.join(__dirname, '../frontend/build');
+app.use(express.static(frontendBuildPath));
+
+// 所有非 API 請求返回 index.html（支持 React Router）
+app.get('*', (req, res) => {
+  if (!req.path.startsWith('/api')) {
+    res.sendFile(path.join(frontendBuildPath, 'index.html'));
+  }
+});
 
 const PORT = process.env.PORT || 3000;
 
