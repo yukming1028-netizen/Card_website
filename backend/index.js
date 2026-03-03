@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const bcrypt = require('bcryptjs');
 const pool = require('./db');
 require('dotenv').config();
@@ -9,6 +10,17 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// 服務前端靜態文件
+const frontendBuildPath = path.join(__dirname, '../frontend/build');
+app.use(express.static(frontendBuildPath));
+
+// 所有非 API 請求返回 index.html（支持 React Router）
+app.get('*', (req, res) => {
+  if (!req.path.startsWith('/api') && !req.path.startsWith('/admin-api')) {
+    res.sendFile(path.join(frontendBuildPath, 'index.html'));
+  }
+});
 
 // Health check endpoint for Render
 app.get('/api/health', (req, res) => {
