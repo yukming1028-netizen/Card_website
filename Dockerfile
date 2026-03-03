@@ -37,7 +37,6 @@ COPY --from=backend-prep /app /app
 
 COPY --from=frontend-builder /app/build /app/build
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 RUN echo '#!/bin/sh' > /app/start.sh && \
     echo 'node /app/index.js &' >> /app/start.sh && \
