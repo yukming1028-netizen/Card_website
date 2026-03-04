@@ -35,22 +35,6 @@ function Home() {
 
   return (
     <div className="container">
-      <div className="header">
-        <h1>
-          寶可夢卡牌查詢
-          <span style={{ display: 'block', fontSize: '0.5em', fontWeight: 'normal', marginTop: '10px' }}>
-            Pokémon Card Query
-          </span>
-        </h1>
-        <p>
-          您可以輸入一張寶可夢卡牌獨立編號以查詢資料庫中的描述和評級等級。
-          <br />
-          <span style={{ fontSize: '0.9em', opacity: 0.8 }}>
-            Enter a Pokémon card ID to query the description and rating in the database.
-          </span>
-        </p>
-      </div>
-
       <div className="search-box">
         <form onSubmit={handleSearch}>
           <div className="search-input-wrapper">
@@ -69,7 +53,7 @@ function Home() {
       </div>
 
       {loading && (
-        <div style={{ textAlign: 'center', padding: '20px', color: 'white' }}>
+        <div style={{ textAlign: 'center', padding: '20px', color: '#28a745' }}>
           搜索中(Searching)...
         </div>
       )}
