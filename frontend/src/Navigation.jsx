@@ -5,9 +5,11 @@ function Navigation() {
   const location = useLocation();
 
   const navItems = [
-    { name: '主頁', nameEn: 'Home', path: '/' },
-    { name: '簡介', nameEn: 'Intro', path: '/intro' },
-    { name: '插件', nameEn: 'Plugins', path: '/plugins' },
+    { name: 'Hero 區', nameEn: 'Hero', path: '/#hero-section' },
+    { name: '功能介紹', nameEn: 'Features', path: '/#features-section' },
+    { name: '搜索區', nameEn: 'Search', path: '/#search-section' },
+    { name: '簡介頁', nameEn: 'Intro', path: '/intro' },
+    { name: '插件頁', nameEn: 'Plugins', path: '/plugins' },
   ];
 
   return (
@@ -21,7 +23,7 @@ function Navigation() {
             <Link
               key={item.path}
               to={item.path}
-              className={`navbar-item ${location.pathname === item.path ? 'active' : ''}`}
+              className={`navbar-item ${location.pathname === item.path || (item.path.startsWith('/#') && location.pathname === '/') ? 'active' : ''}`}
             >
               <span className="nav-text-zh">{item.name}</span>
               <span className="nav-text-en">{item.nameEn}</span>
