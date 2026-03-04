@@ -32,7 +32,7 @@ function AdminLogin({ onLogin }) {
   return (
     <div className="container">
       <div className="login-form">
-        <h2>🔐 管理員登入</h2>
+        <h2>🔐 管理頁面</h2>
 
         {error && <div className="error-message">{error}</div>}
 
@@ -168,7 +168,10 @@ function ChangePassword({ onCancel }) {
 
   return (
     <>
-      <h3>修改密碼</h3>
+      <h3 style={{color: '#00c49a',
+    fontWeight: '700',
+    marginBottom: '30px',
+    textAlign: 'center'}}>修改密碼</h3>
       {error && <div className="error-message">{error}</div>}
       {success && <div className="success-message">{success}</div>}
 
@@ -285,7 +288,10 @@ function ResetPassword({ onCancel }) {
 
   return (
     <>
-      <h3>重置密碼</h3>
+      <h3 style={{color: '#00c49a',
+    fontWeight: '700',
+    marginBottom: '30px',
+    textAlign: 'center'}}>重置密碼</h3>
       {error && <div className="error-message">{error}</div>}
       {success && <div className="success-message">{success}</div>}
 

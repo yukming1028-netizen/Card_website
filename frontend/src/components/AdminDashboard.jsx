@@ -76,7 +76,7 @@ function AdminDashboard({ username, onLogout }) {
     <div className="container">
       <div className="admin-dashboard">
         <div className="dashboard-header">
-          <h2>👑 管理員面板</h2>
+          <h2>👑 管理面板</h2>
           <div>
             <span style={{ marginRight: '15px' }}>歡迎, {username}</span>
             <button className="btn btn-small" style={{ background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)' }} onClick={onLogout}>
