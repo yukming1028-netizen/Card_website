@@ -6,9 +6,9 @@ function Navigation() {
   const location = useLocation();
 
   const navItems = [
-    { name: '主頁', nameEn: 'Home', path: '/#home', type: 'hash'},
-    { name: '介紹', nameEn: 'Intro', path: '/#intro', type: 'hash'},
-    { name: '搜卡', nameEn: 'Search', path: '/#search', type: 'hash'},
+    { name: '主頁', nameEn: 'Home', path: '#home', type: 'hash'},
+    { name: '介紹', nameEn: 'Intro', path: '#intro', type: 'hash'},
+    { name: '搜卡', nameEn: 'Search', path: '#search', type: 'hash'},
   ];
 
   return (

@@ -414,10 +414,6 @@ code {
   margin: 0;
 }
 
-.dashboard-header button {
-  margin-left: 10px;
-}
-
 .card-table {
   width: 100%;
   border-collapse: collapse;
@@ -470,7 +466,7 @@ code {
 
 .btn-edit {
   background: #00c49a;
-  color: #333;
+  color: #fff;
 }
 
 .btn-edit:hover {
