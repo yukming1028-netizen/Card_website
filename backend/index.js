@@ -150,11 +150,11 @@ app.get('/api/cards/search', async (req, res) => {
     // 獲取同類型卡牌的統計資料
     const stats = await pool.query(
       `SELECT
-        COUNT(*) as total_count,
-        COUNT(CASE WHEN card_score > $1 THEN 1 END) as higher_count,
-        COUNT(CASE WHEN card_score = $1 THEN 1 END) as same_count
-       FROM cards WHERE card_type = $2`,
-      [card.card_score, card.card_type]
+        SUM(card_quantity) as total_count,
+        SUM(CASE WHEN card_score > $1 THEN card_quantity END) as higher_count,
+        SUM(CASE WHEN card_score = $1 THEN card_quantity END) as same_count
+       FROM cards WHERE card_name = $2`,
+      [card.card_score, card.card_name]
     );
 
     const statsData = stats.rows[0];
@@ -195,7 +195,7 @@ app.get('/api/cards/distribution', async (req, res) => {
     const cardType = cardResult.rows[0].card_name;
 
     const result = await pool.query(
-      `SELECT ROUND(card_score::numeric, 1) as card_score, COUNT(*) as count
+      `SELECT ROUND(card_score::numeric, 1) as card_score, SUM(card_quantity) as count
        FROM cards
        WHERE card_name = $1
        GROUP BY ROUND(card_score::numeric, 1)
