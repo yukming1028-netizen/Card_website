@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Hero from './Hero';
-import Home from './components/Home';
+import Home from './Home';
 import Intro from './Intro';
 import Plugins from './Plugins';
 import AdminLogin from './components/AdminLogin';
@@ -42,7 +42,7 @@ function App() {
         <Navigation />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<><Home /><Hero /></>} />
+            <Route path="/" element={<Home />} />
             <Route path="/intro" element={<Intro />} />
             <Route path="/plugins" element={<Plugins />} />
             <Route
