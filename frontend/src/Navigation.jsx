@@ -7,7 +7,7 @@ function Navigation() {
 
   const navItems = [
     { name: '主頁', nameEn: 'Home', path: '/#home', type: 'hash'},
-    { name: '功能介紹', nameEn: 'Features', path: '/#intro', type: 'hash'},
+    { name: '介紹', nameEn: 'Intro', path: '/#intro', type: 'hash'},
     { name: '搜卡', nameEn: 'Search', path: '/#search', type: 'hash'},
   ];
 

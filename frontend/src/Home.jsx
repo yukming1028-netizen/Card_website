@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import Hero from './Hero';
 import Features from './Features';
 import Plugins from './Plugins';
@@ -9,6 +9,8 @@ import axios from 'axios';
 const API_URL = process.env.REACT_APP_API_URL !== undefined ? process.env.REACT_APP_API_URL : '';
 
 function Home() {
+  useEffect(() => { const element = document.getElementById('home'); if (element) { element.scrollIntoView({ behavior: 'smooth' }); } }, []);
+
   const [searchQuery, setSearchQuery] = useState('');
   const [cardData, setCardData] = useState(null);
   const [loading, setLoading] = useState(false);

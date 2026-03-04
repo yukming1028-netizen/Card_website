@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Hero from './Hero';
@@ -42,7 +42,7 @@ function App() {
         <Navigation />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Navigate to="/#home" replace />} />
+            <Route path="/" element={<Home />} />
             <Route
               path="/card_admin"
               element={
