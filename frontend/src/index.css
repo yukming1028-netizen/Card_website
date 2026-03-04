@@ -918,8 +918,8 @@ code {
 }
 
 .logo-img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 8%;
+  max-height: 8%;
   display: block;
   object-fit: contain;
 }
