@@ -426,6 +426,7 @@ code {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border: 3px solid #333;
 }
 .card-table tr {
   border-style: solid;
@@ -438,10 +439,6 @@ code {
 
 .card-table tr:hover {
   background: rgba(255, 255, 255, 0.1);
-}
-
-.card-table td {
-
 }
 
 .action-buttons {
@@ -488,8 +485,7 @@ code {
 
 .modal-content {
   background: white;
-  padding: 10px;
-  padding-top: 0;
+  padding: 10px 20px 10px;
   border-radius: 16px;
   max-width: 500px;
   width: 90%;
@@ -670,6 +666,7 @@ code {
   font-size: 1.4rem;
   opacity: 0.85;
   font-weight: 500;
+  color: #00c49a;
 }
 
 .hero-description {
@@ -704,6 +701,17 @@ code {
   .hero {
     padding: 40px 20px;
     margin-bottom: 30px;
+    scroll-margin-top: 120px;
+  }
+  .search_plugin {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    scroll-margin-top: 120px;
+  }
+  .features {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    scroll-margin-top: 120px;
   }
 
   .hero-content {
@@ -749,6 +757,13 @@ code {
   .hero-description .text-en {
     font-size: 0.95rem;
   }
+
+  .distribution-items {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -763,6 +778,12 @@ code {
 
   .hero-text .text-zh {
     font-size: 1.3rem;
+  }
+
+  .distribution-items {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 
@@ -844,6 +865,7 @@ code {
   .card-table th,
   .card-table td {
     padding: 8px 4px;
+    border: 2px solid #333;
   }
 }
 

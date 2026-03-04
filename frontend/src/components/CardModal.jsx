@@ -194,7 +194,7 @@ function CardModal({ card, onSave, onCancel }) {
               type="button"
               className="btn"
               onClick={onCancel}
-              style={{ width: 'auto'}}
+              style={{ width: 'auto', background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)' }}
             >
               取消
             </button>

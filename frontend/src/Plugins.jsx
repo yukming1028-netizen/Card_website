@@ -12,12 +12,9 @@ function Plugins() {
           <p className="hero-description">
             <span className="text-zh">
               輸入卡牌名稱或編號，即可快速獲得卡牌的評級。
-              無論是經典系列還是最新版本，都能在這裡找到專業的數據支持，讓收藏更安心。
             </span>
             <span className="text-en">
               Enter a card name or number to quickly search for grading and market value.
-              Whether it's a classic series or the latest release, you can find professional data support here,
-              making your collection more secure.
             </span>
           </p>
         </div>
