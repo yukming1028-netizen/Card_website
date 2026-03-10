@@ -78,20 +78,20 @@ code {
   flex: 1;
   padding: 15px;
   font-size: 1.1rem;
-  border: 3px solid #28a745;
+  border: 3px solid #1e3a8a;
   border-radius: 12px;
   transition: all 0.3s;
 }
 
 .search-input:focus {
   outline: none;
-  border-color: #00c49a;
+  border-color: #3b82f6 ;
   box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 }
 
 .search-button {
   padding: 15px 30px;
-  background: linear-gradient(135deg, #28a745 0%, #00c49a 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6  100%);
   color: white;
   border: none;
   border-radius: 12px;
@@ -141,7 +141,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 .card-detail-header {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 3px solid #00c49a;
+  border-bottom: 3px solid #3b82f6 ;
 }
 
 .card-detail-header h2 {
@@ -161,7 +161,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   background: #f8f9fa;
   padding: 15px;
   border-radius: 12px;
-  border-left: 4px solid #00c49a;
+  border-left: 4px solid #3b82f6 ;
 }
 
 .info-label {
@@ -218,11 +218,11 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   background: #f8f9fa;
   border-radius: 12px;
   padding: 20px;
-  border-left: 4px solid #00c49a;
+  border-left: 4px solid #3b82f6 ;
 }
 
 .distribution-group-title {
-  color: #00c49a;
+  color: #3b82f6 ;
   font-weight: bold;
   margin: 0 0 15px 0;
   font-size: 1.1rem;
@@ -304,7 +304,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 }
 
 .stat-box {
-  background: linear-gradient(135deg, #28a745 0%, #00c49a 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6  100%);
   color: white;
   padding: 20px;
   border-radius: 12px;
@@ -335,7 +335,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 .login-form h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #00c49a;
+  color: #3b82f6 ;
   font-weight: bold;
 }
 
@@ -360,13 +360,13 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 
 .form-input:focus {
   outline: none;
-  border-color: #00c49a;
+  border-color: #3b82f6 ;
 }
 
 .btn {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #28a745 0%, #00c49a 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6  100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -404,7 +404,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 3px solid #00c49a;
+  border-bottom: 3px solid #3b82f6 ;
   flex-wrap: wrap;
   gap: 15px;
 }
@@ -462,12 +462,12 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 }
 
 .btn-edit {
-  background: #00c49a;
+  background: #3b82f6 ;
   color: #fff;
 }
 
 .btn-edit:hover {
-  background: #28a745;
+  background: #1e3a8a;
 }
 
 .modal {
@@ -515,7 +515,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 }
 
 .modal-header h2 {
-  color: #00c49a;
+  color: #3b82f6 ;
   margin: 0;
   font-weight: bold;
   font-size: 1.3rem;
@@ -559,7 +559,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   padding: 12px;
   border-radius: 8px;
   margin: 10px 0;
-  border-left: 4px solid #28a745;
+  border-left: 4px solid #1e3a8a;
 }
 
 .empty-state {
@@ -577,7 +577,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 .hero {
   padding: 60px 40px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(40, 167, 69, 0.1);
+  box-shadow: 0 4px 20px rgba(40, 63, 167, 0.1);
   margin-bottom: 40px;
   scroll-margin-top: 90px;
 }
@@ -585,7 +585,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 .features {
   padding: 60px 40px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(40, 167, 69, 0.1);
+  box-shadow: 0 4px 20px rgba(40, 63, 167, 0.1);
   margin-bottom: 40px;
   scroll-margin-top: 90px;
 }
@@ -593,7 +593,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 .search_plugin {
   padding: 60px 40px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(40, 167, 69, 0.1);
+  box-shadow: 0 4px 20px rgba(40, 63, 167, 0.1);
   margin-bottom: 40px;
   scroll-margin-top: 90px;
 }
@@ -623,7 +623,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   width: 280px;
   height: 280px;
   object-fit: contain;
-  filter: drop-shadow(0 10px 30px rgba(40, 167, 69, 0.3));
+  filter: drop-shadow(0 10px 30px rgba(40, 63, 167, 0.3));
   animation: float 3s ease-in-out infinite;
 }
 
@@ -640,7 +640,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   position: absolute;
   top: -10px;
   right: -10px;
-  background: linear-gradient(135deg, #28a745 0%, #00c49a 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6  100%);
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -662,7 +662,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   font-size: 2.5rem;
   margin-bottom: 25px;
   line-height: 1.3;
-  color: #28a745;
+  color: #1e3a8a;
   font-weight: bold;
 }
 
@@ -677,7 +677,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   font-size: 1.4rem;
   opacity: 0.85;
   font-weight: 500;
-  color: #00c49a;
+  color: #3b82f6 ;
 }
 
 .hero-description {
@@ -688,7 +688,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(40, 167, 69, 0.15);
-  border-left: 4px solid #00c49a;
+  border-left: 4px solid #3b82f6 ;
 }
 
 .hero-description .text-zh {
@@ -696,7 +696,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   font-size: 1.15rem;
   line-height: 1.9;
   margin-bottom: 20px;
-  color: #28a745;
+  color: #1e3a8a;
 }
 
 .hero-description .text-en {
@@ -704,7 +704,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   font-size: 1rem;
   line-height: 1.7;
   opacity: 0.85;
-  color: #00c49a;
+  color: #3b82f6 ;
 }
 
 .footer-links a {
@@ -816,7 +816,6 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
     transition: max-height 0s ease-out;
     flex-direction: column;
     width: 100%;
-    background: #28a745;
     border-radius: 8px;
     padding: 0 10px;
   }
@@ -824,6 +823,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   .navbar-menu.open {
     max-height: 500px; /* 足夠容納所有項目 */
     padding: 10px;
+    display: flex;
   }
 
   .hamburger {
@@ -840,16 +840,41 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 
 @media (min-width: 831px) {
   .hamburger {
-    display: none;
+    display: block; /* 桌面版也顯示漢堡按鈕 */
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    margin-left: 10px;
+    margin-top: 10px;
   }
 
   .navbar-menu {
-    display: flex;
-    gap: 10px;
-    max-height: none; /* 桌面版不需要動畫 */
-    padding: 0;
+    display: none; /* 預設隱藏 */
+    flex-direction: row; /* 橫向排列 */
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0 10px;
+  }
+
+  .navbar-menu.open {
+    display: flex; /* 點擊後展開 */
+    padding-bottom: 5px;
+  }
+
+  .navbar-item {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
   }
 }
+
+
+
+
 
 @media (max-width: 480px) {
   .hero-pokemon {
@@ -980,8 +1005,8 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 
 /* ========== 導航欄樣式 ========== */
 .navbar {
-  background: linear-gradient(135deg, #28a745 0%, #00c49a 100%);
-  box-shadow: 0 2px 10px rgba(40, 167, 69, 0.3);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6  100%);
+  box-shadow: 0 2px 10px rgba(40, 63, 167, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -994,7 +1019,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  height: 60px;
+  min-height: 22px;
 }
 
 .navbar-logo {
@@ -1014,7 +1039,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 
 .logo-text {
   background: white;
-  color: #28a745;
+  color: #1e3a8a;
   padding: 8px 16px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -1029,7 +1054,6 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 
 
 .navbar-menu {
-  display: flex;
   gap: 5px;
 }
 
@@ -1052,7 +1076,7 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 
 .navbar-item.active {
   background: white;
-  color: #28a745;
+  color: #1e3a8a;
   font-weight: bold;
 }
 
@@ -1103,11 +1127,11 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
 
 /* ========== 頁腳樣式 ========== */
 .footer {
-  background: linear-gradient(135deg, #28a745 0%, #00c49a 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6  100%);
   color: white;
   padding: 30px 20px;
   margin-top: auto;
-  box-shadow: 0 -2px 10px rgba(40, 167, 69, 0.3);
+  box-shadow: 0 -2px 10px rgba(40, 63, 167, 0.3);
 }
 
 .footer-content {
