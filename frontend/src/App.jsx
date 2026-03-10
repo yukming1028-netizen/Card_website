@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
@@ -24,6 +24,12 @@ function App() {
       const auth = JSON.parse(storedAuth);
       setIsAdminLoggedIn(true);
       setAdminUsername(auth.username);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.location.hash = "#home";
     }
   }, []);
 
