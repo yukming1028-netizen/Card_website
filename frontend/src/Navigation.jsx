@@ -8,7 +8,6 @@ function Navigation() {
 
   const navItems = [
     { name: '主頁', nameEn: 'Home', path: '#home', type: 'hash'},
-    // { name: '介紹', nameEn: 'Intro', path: '#intro', type: 'hash'},
     { name: '核實認證', nameEn: 'Certificate Verification', path: '#search', type: 'hash'},
     { name: '評級準則', nameEn: 'Grading Standards', path: '/grading_standard', type: 'link'},
     { name: '封套和標籤', nameEn: 'Card Holder & Label', path: '/card_holder', type: 'link'},
@@ -21,8 +20,6 @@ function Navigation() {
           ☰
         </button>
       <div className="navbar-container">
-        {/* Hamburger 按鈕 */}
-        {/* Menu */}
         <div className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
           {navItems.map((item) =>
             item.type === 'hash' ? (
@@ -31,9 +28,9 @@ function Navigation() {
                 smooth
                 to={`/${item.path}`}
                 className={`navbar-item ${location.hash === item.path ? 'active' : ''}`}
-                onClick={() => setMenuOpen(false)} // 點擊後收起
+                onClick={() => setMenuOpen(false)} 
               >
-                <span className="nav-text-zh">{item.name}</span>
+                <span className="nav-text-zh">{item.name}</span><br />
                 <span className="nav-text-en">{item.nameEn}</span>
               </HashLink>
             ) : (
@@ -41,9 +38,9 @@ function Navigation() {
                 key={item.path}
                 to={item.path}
                 className={`navbar-item ${location.pathname === item.path ? 'active' : ''}`}
-                onClick={() => setMenuOpen(false)} // 點擊後收起
+                onClick={() => setMenuOpen(false)} 
               >
-                <span className="nav-text-zh">{item.name}</span>
+                <span className="nav-text-zh">{item.name}</span><br />
                 <span className="nav-text-en">{item.nameEn}</span>
               </Link>
             )

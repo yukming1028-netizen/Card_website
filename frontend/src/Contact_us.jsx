@@ -17,7 +17,7 @@ function ContactUs() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // 驗證必填邏輯
@@ -31,8 +31,23 @@ function ContactUs() {
     }
 
     setError('');
-    alert('表單已提交！');
-    // 這裡可以加上送出到後端的邏輯
+
+    try {
+      const response = await fetch("/api/sendmail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert("表單已提交並寄出郵件！");
+      } else {
+        alert("寄信失敗：" + result.message);
+      }
+    } catch (err) {
+      alert("系統錯誤：" + err.message);
+    }
   };
 
   return (

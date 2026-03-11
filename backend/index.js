@@ -317,6 +317,15 @@ async function initDatabase() {
       INSERT INTO admins (username, password_hash)
       SELECT 'admin', '$2a$10$xw.zVJTGyUA.FKWmG9SNx.oWX9DCOonFoy4oRDvhNRkm60TANon7e'
       WHERE NOT EXISTS (SELECT 1 FROM admins WHERE username = 'admin');
+      
+    CREATE TABLE reset_codes (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      user_name VARCHAR(50) NOT NULL,         -- 對應 users.username
+      code VARCHAR(20) NOT NULL,              -- 驗證碼
+      expire_time DATETIME NOT NULL,          -- 到期時間
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (user_name) REFERENCES users(username) ON DELETE CASCADE
+    );
     `);
     console.log('數據庫表初始化完成');
   } catch (error) {

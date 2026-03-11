@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, HashRouter } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
@@ -10,8 +10,8 @@ import Service_fee from './Service_fee';
 import Term_of_use from './Term_of_use';
 import Contact_us from './Contact_us';
 
-import AdminLogin from './components/AdminLogin';
-import AdminDashboard from './components/AdminDashboard';
+import AdminLogin from './AdminLogin';
+import AdminDashboard from './AdminDashboard';
 
 function App() {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
@@ -51,18 +51,11 @@ function App() {
       <div className="app-wrapper">
         <Navigation />
         <main className="main-content">
+          
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route
-              path="/card_admin"
-              element={
-                isAdminLoggedIn ? (
-                  <AdminDashboard username={adminUsername} onLogout={handleLogout} />
-                ) : (
-                  <AdminLogin onLogin={handleLogin} />
-                )
-              }
-            />
+            <Route path="/card_admin" element={<AdminLogin /> } />
+            <Route path="/admin_dashboard" element={<AdminDashboard />} />
             <Route path="/grading_standard" element={<Grading_standard />} />
             <Route path="/card_holder" element={<Card_holder />} />
             <Route path="/service_fee" element={<Service_fee />} />

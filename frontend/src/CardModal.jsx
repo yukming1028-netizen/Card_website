@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function CardModal({ card, onSave, onCancel }) {
   const [formData, setFormData] = useState({
@@ -34,26 +35,45 @@ function CardModal({ card, onSave, onCancel }) {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation
+    // 基本驗證
     if (!formData.card_id || !formData.card_name || !formData.card_score) {
       alert('請填寫必填欄位');
       return;
     }
-
-    // 編號限制為30位數字
     if (!/^\d{1,30}$/.test(formData.card_id)) {
       alert('卡牌編號必須為1-30位數字');
       return;
     }
 
-    onSave({
+    const payload = {
       ...formData,
       card_score: parseFloat(formData.card_score),
       card_quantity: parseInt(formData.card_quantity) || 1
-    });
+    };
+
+    try {
+      let response;
+      if (card) {
+        // 更新卡牌 (PUT)
+        response = await axios.put(`/api/cards.php?id=${card.id}`, payload);
+      } else {
+        // 新增卡牌 (POST)
+        response = await axios.post('/api/cards.php', payload);
+      }
+
+      if (response.data.success) {
+        alert(response.data.message);
+        onSave(response.data); // 通知父元件更新
+      } else {
+        alert('操作失敗');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('伺服器錯誤，請稍後再試');
+    }
   };
 
   return (

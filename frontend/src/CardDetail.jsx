@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL !== undefined ? process.env.REACT_APP_API_URL : '';
-
 function CardDetail({ card }) {
   const [distribution, setDistribution] = useState([]);
 
@@ -10,7 +8,7 @@ function CardDetail({ card }) {
     const fetchDistribution = async () => {
       try {
         const response = await axios.get(
-          `${API_URL}/api/cards/distribution?card_id=${card.card_id}`
+          `/api/cards.php?distribution=${card.card_id}`
         );
         setDistribution(response.data);
       } catch (error) {
@@ -56,7 +54,7 @@ function CardDetail({ card }) {
           </div>
         </div>
 
-        <h3 style={{ margin: '30px 0 20px', color: '#00c49a', fontWeight: 'bold' }}>
+        <h3 style={{ margin: '30px 0 20px', color: '#3b82f6', fontWeight: 'bold' }}>
           分數分佈 (Score Distribution)
         </h3>
 
@@ -85,7 +83,7 @@ function CardDetail({ card }) {
 
         {card.statistics && (
           <>
-            <h3 style={{ margin: '30px 0 20px', color: '#00c49a', fontWeight: 'bold' }}>
+            <h3 style={{ margin: '30px 0 20px', color: '#3b82f6', fontWeight: 'bold' }}>
               同類型卡牌統計 (Same Type Card Statistics)
             </h3>
             <div className="statistics-grid">
@@ -107,7 +105,7 @@ function CardDetail({ card }) {
 
         {(card.image_url1 || card.image_url2 || card.image_url3) && (
           <>
-            <h3 className="extra-info-title" style={{ margin: '30px 0 20px', color: '#00c49a', fontWeight: 'bold' }} >
+            <h3 className="extra-info-title" style={{ margin: '30px 0 20px', color: '#3b82f6', fontWeight: 'bold' }} >
               額外資料(Additional Information)
             </h3>
             <div className="card-images">

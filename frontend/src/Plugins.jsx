@@ -18,6 +18,16 @@ function Plugins() {
             </span>
           </p>
         </div>
+        <div className="hero-image">
+          <img
+            src="/assets/card2.jpg"
+            alt="樣本(Sample Card)"
+            className="hero-pokemon"
+          />
+          <div className="hero-badge">
+            <span className="badge-text">專業查分</span>
+          </div>
+        </div>
       </div>
     </div>
   );

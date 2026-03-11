@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import Hero from './Hero';
 import Features from './Features';
 import Plugins from './Plugins';
-import CardDetail from './components/CardDetail';
+import CardDetail from './CardDetail';
 import axios from 'axios';
 
 // 整合 Docker 使用相對路徑，獨立部署使用完整 URL
@@ -25,7 +25,7 @@ function Home() {
     setCardData(null);
 
     try {
-      const response = await axios.get(`${API_URL}/api/cards/search?card_id=${searchQuery}`);
+      const response = await axios.get(`/api/cards.php?search=${searchQuery}`);
       setCardData(response.data);
     } catch (err) {
       if (err.response?.status === 404) {
@@ -39,42 +39,46 @@ function Home() {
   };
 
   return (
-    <div className="container">
-      <Hero />
-      <Features />
-      <Plugins />
-      <div className="search-section" id="search-section">
-        <div className="search-box">
-          <form onSubmit={handleSearch}>
-            <div className="search-input-wrapper">
-              <input
-                type="text"
-                className="search-input"
-                placeholder="輸入寶可夢卡牌獨立編號(Input Pokémon Card No.)..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button type="submit" className="search-button">
-                🔍 搜索(Search)
-              </button>
+    <div id="home" style={{scrollMarginTop: '90px'}}>
+      <img src="/assets/home_banner.jpg" alt="Hero Background" className="hero-bg" style={{marginLeft:'1%',width:'98%',maxHeight:'500px'}}/>
+      <div className="container">
+        <Hero />
+        <Features />
+        <Plugins />
+        <div className="search-section" id="search-section">
+          <div className="search-box">
+            <form onSubmit={handleSearch}>
+              <div className="search-input-wrapper">
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="輸入寶可夢卡牌獨立編號(Input Pokémon Card No.)..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button type="submit" className="search-button">
+                  🔍 搜索(Search)
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {loading && (
+            <div style={{ textAlign: 'center', padding: '20px', color: '#1e3a8a' }}>
+              搜索中(Searching)...
             </div>
-          </form>
+          )}
+
+          {error && (
+            <div className="error-message" style={{ maxWidth: '600px', margin: '20px auto' }}>
+              {error}
+            </div>
+          )}
+
+          {cardData && <CardDetail card={cardData} />}
         </div>
-
-        {loading && (
-          <div style={{ textAlign: 'center', padding: '20px', color: '#28a745' }}>
-            搜索中(Searching)...
-          </div>
-        )}
-
-        {error && (
-          <div className="error-message" style={{ maxWidth: '600px', margin: '20px auto' }}>
-            {error}
-          </div>
-        )}
-
-        {cardData && <CardDetail card={cardData} />}
       </div>
+      <img src="/assets/home_footer_banner.jpg" alt="Hero Background" className="hero-bg" style={{marginLeft:'1%',width:'98%',maxHeight:'350px'}}/>
     </div>
   );
 }

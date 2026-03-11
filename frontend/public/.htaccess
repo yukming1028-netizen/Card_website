@@ -1,0 +1,31 @@
+# 啟用 RewriteEngine
+RewriteEngine On
+DirectoryIndex index.html
+
+# --- 安全性強化 ---
+# 禁止顯示目錄列表
+Options -Indexes
+
+# 禁止存取隱藏檔案 (.git, .env 等)
+RewriteRule (^|/)\. - [F]
+
+# 禁止直接存取 .htaccess
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
+
+# 保留 assets 路徑，不要 rewrite
+RewriteCond %{REQUEST_URI} ^/assets
+RewriteRule .* - [L]
+
+# 保留 api 路徑，不要 rewrite
+RewriteCond %{REQUEST_URI} ^/api
+RewriteRule .* - [L]
+
+# 保留 static 路徑，不要 rewrite
+RewriteCond %{REQUEST_URI} ^/static
+RewriteRule .* - [L]
+
+# 其他所有路徑都交給 index.html
+RewriteRule ^.*$ index.html [L]

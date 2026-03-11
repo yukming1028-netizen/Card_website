@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 import CardModal from './CardModal';
 
-const API_URL = process.env.REACT_APP_API_URL !== undefined ? process.env.REACT_APP_API_URL : '';
 
-function AdminDashboard({ username, onLogout }) {
+function AdminDashboard({  }) {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [editingCard, setEditingCard] = useState(null);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const auth = JSON.parse(localStorage.getItem("adminAuth") || "{}");
+
+  const handleLogout = () => {
+    localStorage.removeItem("adminAuth");
+    navigate("/card_admin");
+  };
 
   useEffect(() => {
     fetchCards();
@@ -19,7 +25,7 @@ function AdminDashboard({ username, onLogout }) {
   const fetchCards = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`${API_URL}/api/cards`);
+      const response = await axios.get('/api/cards.php');
       setCards(response.data);
     } catch (error) {
       setError('獲取卡牌列表失敗');
@@ -42,10 +48,10 @@ function AdminDashboard({ username, onLogout }) {
     if (!window.confirm('確定要刪除這張卡牌嗎？')) return;
 
     try {
-      await axios.delete(`${API_URL}/api/admin/cards/${id}`);
+      await axios.delete(`/api/cards.php?id=${id}`);
       setCards(cards.filter(card => card.id !== id));
     } catch (error) {
-      setError('刪除卡牌失敗');
+      setError(error.response?.data?.error || '刪除卡牌失敗');
     }
   };
 
@@ -54,7 +60,7 @@ function AdminDashboard({ username, onLogout }) {
       if (editingCard) {
         // Update
         const response = await axios.put(
-          `${API_URL}/api/admin/cards/${editingCard.id}`,
+          '/api/cards.php?id=${editingCard.id}',
           cardData
         );
         setCards(cards.map(card =>
@@ -62,7 +68,7 @@ function AdminDashboard({ username, onLogout }) {
         ));
       } else {
         // Create
-        const response = await axios.post(`${API_URL}/api/admin/cards`, cardData);
+        const response = await axios.post('/api/cards.php', cardData);
         setCards([...cards, response.data]);
       }
       setShowModal(false);
@@ -78,8 +84,8 @@ function AdminDashboard({ username, onLogout }) {
         <div className="dashboard-header">
           <h2>👑 管理面板</h2>
           <div>
-            <span style={{ marginRight: '15px' }}>歡迎, {username}</span>
-            <button className="btn btn-small" style={{ background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)' }} onClick={onLogout}>
+            <span style={{ marginRight: '15px' }}>歡迎, {auth.username}</span>
+            <button className="btn btn-small" style={{ background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)' }} onClick={handleLogout}>
               登出
             </button>
           </div>
