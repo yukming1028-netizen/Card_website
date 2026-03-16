@@ -582,6 +582,14 @@ box-shadow: 0 -2px 10px rgba(60, 252, 105, 0.3);
   scroll-margin-top: 90px;
 }
 
+.aboutus {
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(40, 63, 167, 0.1);
+  margin-bottom: 40px;
+  scroll-margin-top: 90px;
+}
+
 .features {
   padding: 60px 40px;
   text-align: center;

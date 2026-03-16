@@ -6,7 +6,7 @@ function Plugins() {
       <div className="hero-content">
         <div className="hero-text">
           <h1>
-              <span className="text-zh">一鍵查詢，真偽盡在掌握</span>
+              <span className="text-zh">一鍵查詢</span>
               <span className="text-en">One-click lookup, authenticity at your fingertips</span>
           </h1>
           <p className="hero-description">

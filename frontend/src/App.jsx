@@ -9,6 +9,7 @@ import Grading_standard from './Grading_standard';
 import Service_fee from './Service_fee';
 import Term_of_use from './Term_of_use';
 import Contact_us from './Contact_us';
+import About_us from './About_us';
 
 import AdminLogin from './AdminLogin';
 import AdminDashboard from './AdminDashboard';
@@ -61,6 +62,7 @@ function App() {
             <Route path="/service_fee" element={<Service_fee />} />
             <Route path="/term_of_use" element={<Term_of_use />} />
             <Route path="/contact_us" element={<Contact_us />} />
+            <Route path="/about_us" element={<About_us />} />
           </Routes>
 
         </main>

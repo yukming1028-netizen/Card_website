@@ -6,17 +6,76 @@ function ServiceFee() {
       <div className="hero-content">
         <div className="hero-text">
           <h1>
-            <span className="text-zh">服務和費用</span>
-            <span className="text-en">Service and Fees</span>
+            <span className="text-zh">鑑定服務與費用</span>
+            <span className="text-en">Grading Services & Fees</span>
           </h1>
           <p className="hero-description">
             <span className="text-zh">
-              服務內容：提供專業的卡牌評級、真偽驗證和市場價值評估服務。<br />
-              費用結構：根據卡牌的稀有度和評級要求，費用從$10起，具體價格請聯絡我們獲取報價。
+              請根據您卡片的預估價值及所需的處理時間選擇合適的鑑定等級。
             </span>
             <span className="text-en">
-              Service Content: Professional card grading, authenticity verification, and market value assessment.<br />
-              Fee Structure: Starting from $10, the exact price will be provided upon request.
+              Choose the service level that best fits your collection's value and how quickly you need your cards back.
+            </span>
+          </p>
+        </div>
+      </div>
+      <br /><br />
+      <table className="grading-table">
+        <thead>
+          <tr>
+            <th>服務等級 (Service Level)</th>
+            <th>每張費用 (Fee (Per Card))</th>
+            <th>舊等級 (Max Declared Value)</th>
+            <th>新等級 (Est. Turnaround)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span className="zh">經濟型 </span><br /><span className="en">Economy</span></td>
+            <td><span className="zh">$180 HKD</span><br /><span className="en">$180 HKD</span></td>
+            <td><span className="zh">最高申報價值 $500 HKD，30-40 個工作日</span><br /><span className="en">Max Declared Value $500 HKD, 30-40 Business Days</span></td>
+            <td><span className="zh">最高申報價值 $1,000 HKD，30-40 個工作日</span><br /><span className="en">Max Declared Value $1,000 HKD, 30-40 Business Days</span></td>
+          </tr>
+
+          <tr>
+            <td><span className="zh">批量型 (最少 20-50 張)</span><br /><span className="en">Bulk (Min. 20-50 cards)</span></td>
+            <td><span className="zh">$30-$50 HKD</span><br /><span className="en">$30-$50 HKD</span></td>
+            <td><span className="zh">最高申報價值 $500 HKD，45+ 個工作日</span><br /><span className="en">Max Declared Value $500 HKD, 45+ Business Days</span></td>
+            <td><span className="zh">最高申報價值 $500 HKD，45+ 個工作日</span><br /><span className="en">Max Declared Value $500 HKD, 45+ Business Days</span></td>
+          </tr>
+
+          <tr>
+            <td><span className="zh">標準型 </span><br /><span className="en">Standard</span></td>
+            <td><span className="zh">$1000 HKD</span><br /><span className="en">$1000 HKD</span></td>
+            <td><span className="zh">最高申報價值 $2,500 HKD，30-40 個工作日</span><br /><span className="en">Max Declared Value $2,500 HKD, 30-40 Business Days</span></td>
+            <td><span className="zh">最高申報價值 $2,500 HKD，15-25 個工作日</span><br /><span className="en">Max Declared Value $2,500 HKD, 15-25 Business Days</span></td>
+          </tr>
+
+          <tr>
+            <td><span className="zh">特級型</span><br /><span className="en">Express</span></td>
+            <td><span className="zh">$1500+ HKD</span><br /><span className="en">$1500+ HKD</span></td>
+            <td><span className="zh">最高申報價值 $10,000 HKD，5-10 個工作日</span><br /><span className="en">Max Declared Value $10,000 HKD, 5-10 Business Days</span></td>
+            <td><span className="zh">最高申報價值 $10,000 HKD，5-10 個工作日</span><br /><span className="en">Max Declared Value $10,000 HKD, 5-10 Business Days</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div className="hero-content" style={{marginTop:'2%'}}>
+        <div className="hero-text">
+          <h1>
+            <span className="text-zh">遞送須知</span>
+            <span className="text-en">Submission Guidelines</span>
+          </h1>
+          <p className="hero-description">
+            <span className="text-zh">
+              1. 申報價值：服務費用取決於卡片鑑定後的預估市場價值。<br />
+              2. 包裝要求：寄送時請使用半硬質卡夾（如 Card Savers），請勿使用一般硬卡套（Top Loaders）。<br />
+              3. 後補差額 (Upcharge)：若卡片鑑定後的市場價值超過所選等級的上限，客戶需補回對應等級的費用差額。
+            </span>
+            <span className="text-en">
+              1. Declare Value: Fees are based on the estimated value of the card after grading.<br />
+              2. Safe Packaging: Use semi-rigid holders (e.g., Card Savers) rather than top loaders for shipping.<br />
+              3. Upcharges: If a card's market value exceeds your selected tier's limit after grading, an upcharge to the appropriate tier will apply.
             </span>
           </p>
         </div>
@@ -24,37 +83,17 @@ function ServiceFee() {
       <div className="hero-content" style={{marginTop:'2%'}}>
         <div className="hero-text">
           <h1>
-            <span className="text-zh">授權合作夥伴</span>
-            <span className="text-en">Authorized Partners</span>
+            <span className="text-zh">物流與寄送費用</span>
+            <span className="text-en">Shipping & Handling</span>
           </h1>
           <p className="hero-description">
             <span className="text-zh">
-              CGC Cards
+              * 寄送費用：提交者需自行承擔將卡片寄往本中心的所有運費、保險費及相關稅費。<br />
+              * 回郵費用：回郵運費將根據卡片數量及收貨地點在結帳時計算。我們強烈建議為回郵包裹購買全額保險。
             </span>
             <span className="text-en">
-              CGC Cards
-            </span><br />
-            <span className="text-zh">
-              寶可夢經銷商
-            </span>
-            <span className="text-en">
-              Pokemon Distributor
-            </span>
-          </p>
-        </div>
-      </div>
-      <div className="hero-content" style={{marginTop:'2%'}}>
-        <div className="hero-text">
-          <h1>
-            <span className="text-zh">地點</span>
-            <span className="text-en">Location</span>
-          </h1>
-          <p className="hero-description">
-            <span className="text-zh">
-              旺角彌敦道100號ABC大廈10樓
-            </span>
-            <span className="text-en">
-              10/F, ABC Building, 100 Nathan Road, Mong Kok
+              * Submission Costs: The submitter is responsible for all shipping costs, insurance, and any applicable duties/taxes when sending cards to our facility.<br />
+              * Return Shipping: Return shipping fees will be calculated at checkout based on the quantity of cards and your location. We highly recommend adding insurance to your return package.
             </span>
           </p>
         </div>

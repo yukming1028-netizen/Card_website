@@ -8,6 +8,7 @@ function Navigation() {
 
   const navItems = [
     { name: '主頁', nameEn: 'Home', path: '#home', type: 'hash'},
+    { name: '關於我們', nameEn: 'About Us', path: '/about_us', type: 'link'},
     { name: '核實認證', nameEn: 'Certificate Verification', path: '#search', type: 'hash'},
     { name: '評級準則', nameEn: 'Grading Standards', path: '/grading_standard', type: 'link'},
     { name: '封套和標籤', nameEn: 'Card Holder & Label', path: '/card_holder', type: 'link'},

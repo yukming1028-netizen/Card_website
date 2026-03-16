@@ -6,19 +6,17 @@ function Features() {
       <div className="hero-content">
         <div className="hero-text">
           <h1>
-            <span className="text-zh">收藏有價，查分無憂</span>
-            <span className="text-en">Collections have value, grading brings peace of mind</span>
+            <span className="text-zh">專業權威</span>
+            <span className="text-en">Professional and Authoritative</span>
           </h1>
           <p className="hero-description">
             <span className="text-zh">
-              快速輸入 PSA 編號，即可獲取卡牌的評級、真偽驗證與詳細資訊。
-              不論是新手還是資深收藏家，都能輕鬆掌握卡牌價值。
-              資料來源對接 PSA 官方，確保查詢結果真實可信。
+              收藏有價，鑑定無憂：即刻提升您的卡牌價值。<br />
+              只需輸入 ABC編號, 即可秒速獲取卡牌評級。無論是初入收藏還是資深藏家, 都能精準掌握卡牌的增值潛力。數據直接對接 abc官方, 確保每一筆查詢都真實權威, 讓您的收藏更有保障。
             </span>
             <span className="text-en">
-            Quickly enter a PSA certification number to access grading, authenticity verification, and detailed card information.
-            Whether you’re a beginner or a seasoned collector, easily stay on top of your card’s value.
-            Data is directly connected to PSA’s official source, ensuring authentic and trustworthy results.
+              Value Your Passion, Grade with Confidence: Elevate Your Collection Today.<br />
+              Simply enter a ABC certification number to instantly access grading and comprehensive card data. From beginners to elite collectors, we help you master and enhance your card's market value. With direct integration to ABC official records.
             </span>
           </p>
         </div>
