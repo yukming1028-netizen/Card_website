@@ -78,7 +78,37 @@ function Home() {
           {cardData && <CardDetail card={cardData} />}
         </div>
       </div>
-      <img src="/assets/home_footer_banner.jpg" alt="Hero Background" className="hero-bg" style={{marginLeft:'1%',width:'98%',maxHeight:'350px'}}/>
+      <div className="divider" style={{display:'flex', marginLeft:'1%', width:'98%', maxHeight:'400px'}}>
+        <div style={{flex:1}}>
+          <img src="/assets/aboutus.jpg" alt="About Us" className="hero-bg" style={{width:'100%', height:'100%', objectFit:'cover'}} />
+        </div>
+
+
+        <div style={{flex:1, background:'#000', color:'#fff', alignItems:'center', justifyContent:'center'}}>
+          <h1 style={{ marginTop:'8%'}}>關於我們(About Us)</h1><br />
+          <p>我們是一家源自香港、面向全球的專業卡牌評級機構。與其他多元化的評級公司不同，我們是全球唯一「只為寶可夢（Pokémon）卡牌服務」的專屬評級中心。因為專一，所以極致；因為熱愛，所以專業。</p>
+          <br />
+           <button 
+      style={{
+        marginTop:'20px',
+        padding:'10px 20px',
+        background:'#000',
+        color:'#fff',
+        border:'2px solid #fff',
+        borderRadius:'8px',
+        cursor:'pointer',
+        fontSize:'14px',
+      }}
+      onClick={() => window.location.href='/about_us'}
+    >
+      瞭解更多(More Information)
+    </button>
+        </div>
+      </div>
+      <br />
+      <a href="/about_us">
+        <img src="/assets/home_footer_banner.jpg" alt="Hero Background" className="hero-bg" style={{marginLeft:'1%',width:'98%',maxHeight:'350px'}}/>
+      </a>
     </div>
   );
 }

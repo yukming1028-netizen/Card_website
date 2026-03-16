@@ -59,9 +59,11 @@ function ContactUs() {
             <span className="text-en">Contact Us</span>
           </h1>
           <p className="hero-description">
-            <span className="text-zh">請填寫以下資料</span>
-            <span className="text-en">Please fill in the form below</span>
-          
+            <span className="text-zh">請直接聯絡我們索取正式申請表</span>
+            <span className="text-en">Please contact us directly to retrieve the official Application Form.</span>
+            <br /><span className="text-zh">對鑑定流程或提交訂單有任何疑問？歡迎聯絡我們的專業團隊。</span>
+            <span className="text-en">Have questions about your submission or our grading process? Our team is here to help.</span>
+            <br /><br />
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">

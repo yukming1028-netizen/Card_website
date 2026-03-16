@@ -159,53 +159,7 @@ function GradingStandard() {
     </table>
 
 
-  <h2>標註與簽名評級 (Annotations and Signature Grading)</h2>
-  <table className="grading-table">
-    <thead>
-      <tr>
-        <th>類別 (Classification)</th>
-        <th>說明 (Description)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span className="zh">真實 AU</span><br /><span className="en">Authentic AU</span></td>
-        <td><span className="zh">卡牌真實但無法數值評級。</span><br /><span className="en">Card is authentic but cannot be numerically graded.</span></td>
-      </tr>
-      <tr>
-        <td><span className="zh">真實且修改過 AA</span><br /><span className="en">Authentic Altered AA</span></td>
-        <td><span className="zh">卡牌真實但經過修剪或重上色。</span><br /><span className="en">Card is authentic but has been trimmed or re-colored.</span></td>
-      </tr>
-      <tr>
-        <td><span className="zh">簽名評級</span><br /><span className="en">Signature Grading</span></td>
-        <td><span className="zh">5–10 分制，10 分代表完美簽名。</span><br /><span className="en">5–10 scale, with 10 representing a perfect signature.</span></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>停止使用的評級等級 (Grading Levels No Longer in Use)</h2>
-  <table className="grading-table">
-    <thead>
-      <tr>
-        <th>舊等級 (Old Level)</th>
-        <th>新等級 (New Level)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span className="zh">CGC Trading Cards Gem Mint 9.5</span><br /><span className="en">CGC Trading Cards Gem Mint 9.5</span></td>
-        <td><span className="zh">CGC Cards Gem Mint 10</span><br /><span className="en">CGC Cards Gem Mint 10</span></td>
-      </tr>
-      <tr>
-        <td><span className="zh">CSG Gem Mint 9.5</span><br /><span className="en">CSG Gem Mint 9.5</span></td>
-        <td><span className="zh">CGC Cards Gem Mint 10</span><br /><span className="en">CGC Cards Gem Mint 10</span></td>
-      </tr>
-      <tr>
-        <td><span className="zh">Perfect 10</span><br /><span className="en">Perfect 10</span></td>
-        <td><span className="zh">仍保留，但舊版本已停止使用</span><br /><span className="en">Still retained, but the old version is no longer in use</span></td>
-      </tr>
-    </tbody>
-  </table>
+  
 </div>
 
   </div>

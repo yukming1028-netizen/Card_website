@@ -24,38 +24,38 @@ function ServiceFee() {
         <thead>
           <tr>
             <th>服務等級 (Service Level)</th>
-            <th>每張費用 (Fee (Per Card))</th>
-            <th>舊等級 (Max Declared Value)</th>
-            <th>新等級 (Est. Turnaround)</th>
+            <th>每張費用 (Fee Per Card)</th>
+            <th>單張最高申報價值 (Max Declared Value)</th>
+            <th>預計處理時間 (Est. Turnaround)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><span className="zh">經濟型 </span><br /><span className="en">Economy</span></td>
-            <td><span className="zh">$180 HKD</span><br /><span className="en">$180 HKD</span></td>
-            <td><span className="zh">最高申報價值 $500 HKD，30-40 個工作日</span><br /><span className="en">Max Declared Value $500 HKD, 30-40 Business Days</span></td>
-            <td><span className="zh">最高申報價值 $1,000 HKD，30-40 個工作日</span><br /><span className="en">Max Declared Value $1,000 HKD, 30-40 Business Days</span></td>
+            <td><span className="zh">$180 HKD</span><br /><span className="en"></span></td>
+            <td><span className="zh">$500 HKD</span><br /><span className="en"></span></td>
+            <td><span className="zh">30-40 個工作日</span><br /><span className="en"> 30-40 Business Days</span></td>
           </tr>
 
           <tr>
             <td><span className="zh">批量型 (最少 20-50 張)</span><br /><span className="en">Bulk (Min. 20-50 cards)</span></td>
-            <td><span className="zh">$30-$50 HKD</span><br /><span className="en">$30-$50 HKD</span></td>
-            <td><span className="zh">最高申報價值 $500 HKD，45+ 個工作日</span><br /><span className="en">Max Declared Value $500 HKD, 45+ Business Days</span></td>
-            <td><span className="zh">最高申報價值 $500 HKD，45+ 個工作日</span><br /><span className="en">Max Declared Value $500 HKD, 45+ Business Days</span></td>
+            <td><span className="zh">$30-$50 HKD</span><br /><span className="en"></span></td>
+            <td><span className="zh">$500 HKD</span><br /><span className="en"></span></td>
+            <td><span className="zh">45+ 個工作日</span><br /><span className="en">45+ Business Days</span></td>
           </tr>
 
           <tr>
             <td><span className="zh">標準型 </span><br /><span className="en">Standard</span></td>
-            <td><span className="zh">$1000 HKD</span><br /><span className="en">$1000 HKD</span></td>
-            <td><span className="zh">最高申報價值 $2,500 HKD，30-40 個工作日</span><br /><span className="en">Max Declared Value $2,500 HKD, 30-40 Business Days</span></td>
-            <td><span className="zh">最高申報價值 $2,500 HKD，15-25 個工作日</span><br /><span className="en">Max Declared Value $2,500 HKD, 15-25 Business Days</span></td>
+            <td><span className="zh">$1000 HKD</span><br /><span className="en"></span></td>
+            <td><span className="zh">$2,500 HKD</span><br /><span className="en"></span></td>
+            <td><span className="zh">15-25 個工作日</span><br /><span className="en">15-25 Business Days</span></td>
           </tr>
 
           <tr>
             <td><span className="zh">特級型</span><br /><span className="en">Express</span></td>
-            <td><span className="zh">$1500+ HKD</span><br /><span className="en">$1500+ HKD</span></td>
-            <td><span className="zh">最高申報價值 $10,000 HKD，5-10 個工作日</span><br /><span className="en">Max Declared Value $10,000 HKD, 5-10 Business Days</span></td>
-            <td><span className="zh">最高申報價值 $10,000 HKD，5-10 個工作日</span><br /><span className="en">Max Declared Value $10,000 HKD, 5-10 Business Days</span></td>
+            <td><span className="zh">$1500+ HKD</span><br /><span className="en"></span></td>
+            <td><span className="zh">$10,000 HKD</span><br /><span className="en"></span></td>
+            <td><span className="zh">5-10 個工作日</span><br /><span className="en">5-10 Business Days</span></td>
           </tr>
         </tbody>
       </table>
