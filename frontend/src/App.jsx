@@ -28,11 +28,14 @@ function App() {
     }
   }, []);
 
-  useEffect(() => {
-    if (!window.location.hash) {
-      window.location.hash = "#home";
-    }
-  }, []);
+useEffect(() => {
+  const excludePaths = ["/about_us", "/card_admin", "/admin_dashboard", "/grading_standard", "/card_holder", "/service_fee", "/term_of_use", "/contact_us"];
+  const path = window.location.pathname;
+
+  if (!excludePaths.includes(path) && !window.location.hash) {
+    window.location.hash = "#home";
+  }
+}, []);
 
   const handleLogin = (username) => {
     setIsAdminLoggedIn(true);

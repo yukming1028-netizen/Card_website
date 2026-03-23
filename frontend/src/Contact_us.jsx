@@ -89,7 +89,7 @@ function ContactUs() {
             </div>
 
             <div className="form-group">
-              <label>電郵 Email</label>
+              <label>電郵 Email<span className="required" style={{color: 'red'}}>*</span></label>
               <input
                 type="email"
                 name="email"

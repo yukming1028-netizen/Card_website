@@ -5,11 +5,7 @@ function Hero() {
     <div className="hero" >
       <div className="hero-content">
         <div className="hero-image">
-          <img
-            src="/assets/card1.jpg"
-            alt="寶可夢卡牌"
-            className="hero-pokemon"
-          />
+          <img src="/assets/card1.jpg" alt="banner" className="hero-pokemon" />
           <div className="hero-badge">
             <span className="badge-text">專業查分</span>
           </div>

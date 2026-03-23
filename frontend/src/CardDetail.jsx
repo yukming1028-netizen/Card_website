@@ -85,11 +85,11 @@ function CardDetail({ card }) {
                 {sortedDistribution.map((score, index) => (
                   <div key={index} className="distribution-item">
                     <div className="distribution-score">
-                      {parseFloat(score.card_score) > 10 ? "10A-": parseFloat(score.card_score).toFixed(1)}
-                      {parseFloat(card.card_score) === 10 
+                      {parseFloat(score.card_score) > 10 ? 10: parseFloat(score.card_score).toFixed(1)}
+                      {parseFloat(score.card_score) === 10 
                         ? 'A-'
                         : ''}
-                      {parseFloat(card.card_score) === 10.1 
+                      {parseFloat(score.card_score) === 10.1 
                         ? 'A+'
                         : ''}
                       {score.card_score > 10.1 && (

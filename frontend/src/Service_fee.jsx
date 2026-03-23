@@ -88,12 +88,12 @@ function ServiceFee() {
           </h1>
           <p className="hero-description">
             <span className="text-zh">
-              * 寄送費用：提交者需自行承擔將卡片寄往本中心的所有運費、保險費及相關稅費。<br />
-              * 回郵費用：回郵運費將根據卡片數量及收貨地點在結帳時計算。我們強烈建議為回郵包裹購買全額保險。
+              寄送費用：提交者需自行承擔將卡片寄往本中心的所有運費、保險費及相關稅費。<br />
+              回郵費用：回郵運費將根據卡片數量及收貨地點在結帳時計算。我們強烈建議為回郵包裹購買全額保險。
             </span>
             <span className="text-en">
-              * Submission Costs: The submitter is responsible for all shipping costs, insurance, and any applicable duties/taxes when sending cards to our facility.<br />
-              * Return Shipping: Return shipping fees will be calculated at checkout based on the quantity of cards and your location. We highly recommend adding insurance to your return package.
+              Submission Costs: The submitter is responsible for all shipping costs, insurance, and any applicable duties/taxes when sending cards to our facility.<br />
+              Return Shipping: Return shipping fees will be calculated at checkout based on the quantity of cards and your location. We highly recommend adding insurance to your return package.
             </span>
           </p>
         </div>

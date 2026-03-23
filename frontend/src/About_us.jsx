@@ -4,7 +4,8 @@ function About_us() {
   return (
     <div>
     <div className="aboutus">
-      <div className="hero-content">
+      <img src="/assets/about_us_banner.png" alt="Hero Background" className="hero-bg" style={{marginLeft:'1%',width:'98%',maxHeight:'500px'}}/>
+      <div className="hero-content" style={{marginTop:'20px'}}>
         <div className="hero-text">
           <h1>
             <span className="text-zh">關於我們</span>
@@ -48,18 +49,18 @@ function About_us() {
           </h1>
           <p className="hero-description">
             <span className="text-zh">
-              * 絕對的專注： 我們拒絕流水線式的混合評級。這裡只有對寶可夢卡的深刻理解與專項技術，確保每張卡牌都獲得最精準的等級界定。
+              絕對的專注： 我們拒絕流水線式的混合評級。這裡只有對寶可夢卡的深刻理解與專項技術，確保每張卡牌都獲得最精準的等級界定。
               <br /> 
-              * 專業鑑定標準： 結合數十年市場經驗，我們自研了一套嚴苛且透明的評級標準，涵蓋印刷偏移、表面刮痕、邊角磨損及中心對比度等核心維度。
+              專業鑑定標準： 結合數十年市場經驗，我們自研了一套嚴苛且透明的評級標準，涵蓋印刷偏移、表面刮痕、邊角磨損及中心對比度等核心維度。
               <br />
-              * 提升收藏價值： 獲得我們專業認證的卡牌，不僅是對品相的認可，更是卡牌在二級市場流通時的信心保證。  
+              提升收藏價值： 獲得我們專業認證的卡牌，不僅是對品相的認可，更是卡牌在二級市場流通時的信心保證。  
             </span>
             <span className="text-en">
-              * Absolute Specialization: We reject "assembly-line" mixed grading. We offer only deep understanding and specialized techniques for Pokémon cards, ensuring every card receives the most precise grade possible.
+              Absolute Specialization: We reject "assembly-line" mixed grading. We offer only deep understanding and specialized techniques for Pokémon cards, ensuring every card receives the most precise grade possible.
               <br />
-              * Professional Grading Standards: Leveraging decades of market experience, we have developed a rigorous and transparent grading rubric. This covers core dimensions including centering (print alignment), surface scratches, corner wear, and edge condition.
+              Professional Grading Standards: Leveraging decades of market experience, we have developed a rigorous and transparent grading rubric. This covers core dimensions including centering (print alignment), surface scratches, corner wear, and edge condition.
               <br />
-              * Enhancing Collection Value: A certification from us is more than just a grade—it is a mark of quality and a guarantee of confidence for the secondary market.
+              Enhancing Collection Value: A certification from us is more than just a grade—it is a mark of quality and a guarantee of confidence for the secondary market.
             </span>
           </p>
         </div>
