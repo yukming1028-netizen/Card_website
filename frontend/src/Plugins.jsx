@@ -6,8 +6,8 @@ function Plugins() {
       <div className="hero-content">
         <div className="hero-text">
           <h1>
-              <span className="text-zh">核實HKG認證</span>
-              <span className="text-en">Verify HKG Authentication</span>
+              <span className="text-zh">核實 HKG CARDZ 認證</span>
+              <span className="text-en">Verify HKG CARDZ Authentication</span>
           </h1>
           <p className="hero-description">
             <span className="text-zh">

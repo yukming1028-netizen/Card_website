@@ -40,11 +40,11 @@ function CardModal({ card, onSave, onCancel }) {
 
     // 基本驗證
     if (!formData.card_id || !formData.card_name || !formData.card_score) {
-      alert('請填寫必填欄位');
+      alert('請填寫必填 * 欄位 Please fill in all mandatory fields');
       return;
     }
     if (!/^\d{1,30}$/.test(formData.card_id)) {
-      alert('卡牌編號必須為1-30位數字');
+      alert('卡牌編號必須為1-30位數字 Card No. must be 1-30 digits');
       return;
     }
 
@@ -69,11 +69,11 @@ function CardModal({ card, onSave, onCancel }) {
         onSave(response.data); // 通知父元件更新
         window.location.reload();
       } else {
-        alert('操作失敗');
+        alert('操作失敗 Operation failed: ' + response.data.message);
       }
     } catch (err) {
       console.error(err);
-      alert('伺服器錯誤，請稍後再試');
+      alert('伺服器錯誤，請稍後再試 Server error, please try again later');
     }
   };
 

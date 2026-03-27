@@ -5,7 +5,8 @@ function ContactUs() {
     name: '',
     phone: '',
     email: '',
-    cardCount: ''
+    cardCount: '',
+    question: ''
   });
 
   const [error, setError] = useState('');
@@ -107,6 +108,18 @@ function ContactUs() {
                 value={formData.cardCount}
                 onChange={handleChange}
                 className="form-input"
+              />
+            </div>
+
+            <div className="form-group">
+              <label>詳細查詢 Description of the query</label>
+              <textarea
+                type="text"
+                name="question"
+                value={formData.question}
+                onChange={handleChange}
+                className="form-input"
+                style={{height:"200px"}}
               />
             </div>
 

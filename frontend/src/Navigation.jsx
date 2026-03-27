@@ -17,11 +17,11 @@ function Navigation() {
 
   return (
     <nav className="navbar">
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', backgroundColor: 'white',border: 'solid 5px', borderImageSource:'linear-gradient(135deg, #1e3a8a, #3b82f6)', borderImageSlice: '1' }}>
           <button 
             className="hamburger" 
             onClick={() => setMenuOpen(!menuOpen)}
-            style={{ marginRight: '8px' }}
+            style={{ marginRight: '8px', color: '#1e3a8a' }}
           >
             ☰
           </button>
@@ -30,7 +30,7 @@ function Navigation() {
               src="/assets/logo.png" 
               alt="Hero Background" 
               className="hero-bg" 
-              style={{ maxWidth: '90px', maxHeight: '50px', marginTop: '15px',marginLeft: '1%' }}
+              style={{ maxWidth: '90px', maxHeight: '50px', marginTop: '10px',marginBottom: '10px', marginLeft: '1%' }}
             />
           </a>
         </div>

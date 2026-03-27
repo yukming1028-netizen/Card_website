@@ -18,6 +18,7 @@ $name = $data['name'] ?? '';
 $phone = $data['phone'] ?? '';
 $email = $data['email'] ?? '';
 $cardCount = $data['cardCount'] ?? '';
+$question = $data['question'] ?? '';
 
 $mail = new PHPMailer(true);
 
@@ -41,6 +42,7 @@ try {
         <p><b>電話:</b> $phone</p>
         <p><b>電郵:</b> $email</p>
         <p><b>評核卡數量:</b> $cardCount</p>
+        <p><b>詳細查詢:</b> $question</p>
     ";
 
     $mail->send();

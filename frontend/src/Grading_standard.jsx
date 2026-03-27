@@ -32,18 +32,18 @@ function GradingStandard() {
       </thead>
       <tbody>
         <tr>
-          <td><span className="zh">10⭐️⭐️⭐</span><br /><span className="en">HKG Cards</span></td>
+          <td><span className="zh">10⭐️⭐️⭐</span><br /><span className="en">Gem Mint</span></td>
           <td><span className="zh">
-            此等級卡牌完美無瑕。置中度（Centering）表現為完美的 50/50，且具備無暇的色澤與精準的校準。所有獲評為 ABC Cards 10 ⭐️⭐️⭐️ 等級的卡牌，均會獲得專屬的 ABC Cards 10 ⭐️⭐️⭐️特殊標籤。全球僅限三張：三星評級 (3-Star) 代表住無懈可擊嘅完美。我哋對每一張寶可夢卡進行極限審核，確保同款卡牌喺全球範圍內，最多只會有三張獲得呢份榮耀。極致稀有，定義收藏新高度。
+            此等級卡牌完美無瑕。置中度（Centering）表現為完美的 50/50，且具備無暇的色澤與精準的校準。所有獲評為 HKG CARDZ 10 ⭐️⭐️⭐️ 等級的卡牌，均會獲得專屬的 HKG CARDZ 10 ⭐️⭐️⭐️特殊標籤。全球僅限三張：三星評級 (3-Star) 代表住無懈可擊嘅完美。我哋對每一張寶可夢卡進行極限審核，確保同款卡牌喺全球範圍內，最多只會有三張獲得呢份榮耀。極致稀有，定義收藏新高度。
           </span><br />
           <span className="en">
             10 ⭐️⭐️⭐️: Perfect flawless. Features 50/50 centering, flawless color, and zero visible defects. Earns a unique "10 ⭐️⭐️⭐️" label.Limited to 3 Worldwide: The 10 ⭐️⭐️⭐️ Grade represents flawless perfection. We apply extreme scrutiny to every Pokémon card, ensuring this honor is reserved for only three copies of the same card globally. Your collection, redefined by ultimate scarcity.
           </span></td>
         </tr>
         <tr>
-          <td><span className="zh">10 ⭐️⭐</span><br /><span className="en">HKG Cards</span></td>
+          <td><span className="zh">10 ⭐️⭐</span><br /><span className="en">Gem Mint</span></td>
           <td><span className="zh">
-            全球僅限十張：10 ⭐️⭐️此等級卡牌沒有任何肉眼可見的瑕疵。置中度（Centering）表現為完美的 50/50，且具備無暇的色澤與精準的校準。所有獲評為  ABC Cards 10 ⭐️⭐️ 等級的卡牌，均會獲得專屬的  ABC Cards 10 ⭐️⭐️ 特殊標籤。
+            全球僅限十張：10 ⭐️⭐️此等級卡牌沒有任何肉眼可見的瑕疵。置中度（Centering）表現為完美的 50/50，且具備無暇的色澤與精準的校準。所有獲評為  HKG CARDZ 10 ⭐️⭐️ 等級的卡牌，均會獲得專屬的  HKG CARDZ 10 ⭐️⭐️ 特殊標籤。
           </span><br />
           <span className="en">
             10 ⭐️⭐️: Virtually perfect. Features 50/50 centering, flawless color, and zero visible defects. Earns a unique "10 ⭐️ ⭐️" label.
@@ -52,10 +52,10 @@ function GradingStandard() {
         <tr>
           <td><span className="zh">10A+</span><br /><span className="en">Gem Mint</span></td>
           <td><span className="zh">
-            此等級卡牌的總體評分達 10A+，但在單項評選標準中未達 ABC Cards 10 ⭐️⭐️的極致要求。Gem Mint 10 代表卡牌的極致狀態，近乎完美無瑕。具備四個極其銳利的邊角、清晰的印刷焦距以及完整的原始光澤。卡面不可有任何污漬，僅在不影響整體美感的前提下，允許極輕微的印刷瑕疵。居中比例要求：正面約 55/45 以內，背面約 75/25 以
+            此等級卡牌的總體評分達 10A+，但在單項評選標準中未達 HKG CARDZ 10 ⭐️⭐️的極致要求。Gem Mint 10 代表卡牌的極致狀態，近乎完美無瑕。具備四個極其銳利的邊角、清晰的印刷焦距以及完整的原始光澤。卡面不可有任何污漬，僅在不影響整體美感的前提下，允許極輕微的印刷瑕疵。居中比例要求：正面約 55/45 以內，背面約 75/25 以
           </span><br />
           <span className="en">
-            An overall 10A+ that narrowly misses ABC Cards 10 ⭐️⭐️ status in one category. A ABC Gem Mint 10 card represents the pinnacle of quality a virtually pristine specimen. It features four razor-sharp corners, flawless focus, and its full original gloss. While free of any staining, a minute printing imperfection is permissible only if it does not detract from the card's overall aesthetic. Centering must be within approximately 55/45 on the front and 75/25 on the reverse.
+            An overall 10A+ that narrowly misses HKG CARDZ 10 ⭐️⭐️ status in one category. A HKG CARDZ Gem Mint 10 card represents the pinnacle of quality a virtually pristine specimen. It features four razor-sharp corners, flawless focus, and its full original gloss. While free of any staining, a minute printing imperfection is permissible only if it does not detract from the card's overall aesthetic. Centering must be within approximately 55/45 on the front and 75/25 on the reverse.
           </span></td>
         </tr>
         <tr>

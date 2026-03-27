@@ -29,9 +29,9 @@ function Home() {
       setCardData(response.data);
     } catch (err) {
       if (err.response?.status === 404) {
-        setError('找不到該寶可夢卡牌');
+        setError('找不到該寶可夢卡牌 Card not found');
       } else {
-        setError('搜索失敗，請稍後再試');
+        setError('搜索失敗，請稍後再試 Operation failed, please try again later');
       }
     } finally {
       setLoading(false);
@@ -40,7 +40,7 @@ function Home() {
 
   return (
     <div id="home" style={{scrollMarginTop: '90px'}}>
-      <img src="/assets/home_banner.jpg" alt="Hero Background" className="hero-bg" style={{marginLeft:'1%',width:'98%',maxHeight:'800px'}}/>
+      {/* <img src="/assets/home_banner.jpg" alt="Hero Background" className="hero-bg" style={{marginLeft:'1%',width:'98%',maxHeight:'800px'}}/> */}
       <div className="container">
         <Hero />
         <Features />
@@ -78,9 +78,9 @@ function Home() {
           {cardData && <CardDetail card={cardData} />}
         </div>
       </div>
-      <a href="/about_us">
+      {/* <a href="/about_us">
         <img src="/assets/home_footer_banner.jpg" alt="Hero Background" className="hero-bg" style={{marginLeft:'1%',width:'98%',maxHeight:'350px'}}/>
-      </a>
+      </a> */}
     </div>
   );
 }
