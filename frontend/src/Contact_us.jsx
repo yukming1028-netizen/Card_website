@@ -23,11 +23,11 @@ function ContactUs() {
 
     // 驗證必填邏輯
     if (!formData.name || !formData.cardCount) {
-      setError('名字和評核卡數量必須填寫');
+      setError('名字和評核卡數量必須填寫 Name and Number of assessment cards are required');
       return;
     }
     if (!formData.phone && !formData.email) {
-      setError('電話和電郵至少填寫一個');
+      setError('電話和電郵至少填寫一個 Telephone or Email is required');
       return;
     }
 
@@ -42,12 +42,12 @@ function ContactUs() {
 
       const result = await response.json();
       if (result.success) {
-        alert("表單已提交並寄出郵件！");
+        alert("表單已提交並寄出郵件！ Form submitted and email sent!");
       } else {
-        alert("寄信失敗：" + result.message);
+        alert("寄信失敗 Mail failed：" + result.message);
       }
     } catch (err) {
-      alert("系統錯誤：" + err.message);
+      alert("系統錯誤 System Error：" + err.message);
     }
   };
 
